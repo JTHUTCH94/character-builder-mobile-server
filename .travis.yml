@@ -1,0 +1,11 @@
+language: node_js
+node_js: node
+services: 
+  - mongodb
+deploy:
+  provider: heroku
+  api_key:
+    secure: CF3nGJQbpKdW6OPjvpHqMWEUtzP73zD0gncgGh0Pn5hkmqQ0VXEaUFqQEFURLWGtnPy6CMHQTOaQzJYCNMN0+BCo2rm5K6Yun5j2M8QX9/AvNsWNZ9VYGgBUq/zQtK56I3cgMuoANaCSL1JKmMiYTiFBauYFSvXKGES8VDrProM1VyCfQTC6jwvzSPIxexlAReOpnWOYfu6XlFsmd2CAd9vSJwyv1QVFDVuvxVCrMGNNfesS0P1lanDptCCHzoWAHk1MZfaYY2G2l006FRzr/+wF6u0UG+XqABcvpgOtgLbqmbMeGhU0IGGhd0ng+i2hvVKAH6cQ3eaSeAdLTDLTs9efp/M9hEHrYvJjLv5ZCweZXGRCcFKMm0POZXmylsSI5m18HGS03usw197ZgzOCYcuEnuIqp6TJAcHdNFwWkJF3PtNpQIJixFtvZblEhZW790J/VLEoEH+euis4acWwDygK2XSsNOUi5EmH7VBIEVM+xBlEyoVufLYoK2BggFEgCBIM1e29cBbGWKFov/M2j9Jm5XikPMgsSqdD36C/FX2mxMLctrucEpSaZVusLpcWbH6f8r+rSWftofQdlALIBXzlw76MBHZar3of5unzmNwNgiaX3HA5m62TvZCopaZe/HO7yW3AHJ6/9Q25r30JTwyFccKtX9um6n1OkYDzU0I=
+  app: 'node_js: node'
+  on:
+    repo: JTHUTCH94/Character-Builder-Server

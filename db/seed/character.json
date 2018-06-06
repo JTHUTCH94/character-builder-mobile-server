@@ -1,0 +1,16 @@
+[
+    {
+        "_id": "000000000000000000000000",   
+        "name":"John",
+        "race":"Orc",
+        "classification":"Brute",
+        "weapon":"Axe"
+    },
+    {
+        "_id": "000000000000000000000001",
+        "name":"Bob",
+        "race":"Halfling",
+        "classification":"Cleric",
+        "weapon":"Mace"
+    }
+]
