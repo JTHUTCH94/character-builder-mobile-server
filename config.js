@@ -4,10 +4,13 @@ module.exports = {
   PORT: process.env.PORT || 8080,
   CLIENT_ORIGIN: process.env.CLIENT_ORIGIN || 'http://localhost:3000',
   DATABASE_URL:
-        process.env.DATABASE_URL || 'mongodb://hutch:josh94@ds161008.mlab.com:61008/characters',
+            process.env.DATABASE_URL || 'mongodb://hutch:password94@ds151180.mlab.com:51180/characters-mobile',
   TEST_DATABASE_URL:
-        process.env.TEST_DATABASE_URL ||
-        'mongodb://localhost/thinkful-backend-test'
+            process.env.TEST_DATABASE_URL ||
+            'mongodb://localhost/thinkful-backend-test',
+  JWT_SECRET: process.env.JWT_SECRET || 'jwt-secret',
+  JWT_EXPIRY: process.env.JWT_EXPIRY || '3d'
+
   // DATABASE_URL:
   //     process.env.DATABASE_URL || 'postgres://localhost/thinkful-backend',
   // TEST_DATABASE_URL:

@@ -14,12 +14,17 @@
   "author": "Joe Turner <jturner@thinkful.com>",
   "license": "MIT",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "cors": "^2.8.4",
     "cross-env": "^5.1.4",
     "express": "^4.16.3",
+    "jsonwebtoken": "^8.2.2",
     "knex": "^0.14.4",
     "mongoose": "^5.0.6",
     "morgan": "^1.9.0",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
     "pg": "^7.4.1"
   },
   "devDependencies": {

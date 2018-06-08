@@ -2,12 +2,12 @@
 
 const express = require('express');
 const mongoose = require('mongoose');
-
-const Character = require('../character-model');
-
 const router = express.Router();
 
-router.get('/characters', (req, res) => {
+const Character = require('../models/character-model');
+
+
+router.get('/characters-mobile', (req, res) => {
   Character.find()
     .then(response => {
       res.json(response);
@@ -27,7 +27,7 @@ router.get('/characters', (req, res) => {
     });
 });*/
     
-router.post('/characters', (req, res) => {
+router.post('/characters-mobile', (req, res) => {
   const character = new Character({
     name: req.body.name,
     race: req.body.race,
@@ -38,7 +38,7 @@ router.post('/characters', (req, res) => {
   res.json(character);
 });
     
-router.put('/characters/:id', (req, res) => {
+router.put('/characters-mobile/:id', (req, res) => {
   const id = req.params.id;
   const updateObj = {};
   const updateFields = ['name', 'race', 'classification', 'weapon'];
@@ -58,7 +58,7 @@ router.put('/characters/:id', (req, res) => {
     .catch(err => console.log(err));
 });
     
-router.delete('/characters/:id', (req, res) => {
+router.delete('/characters-mobile/:id', (req, res) => {
   Character.findByIdAndRemove(req.params.id)
     .then(() => {
       res.status(204).end();

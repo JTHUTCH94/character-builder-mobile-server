@@ -3,7 +3,11 @@
 const express = require('express');
 const cors = require('cors');
 const morgan = require('morgan');
-const Character = require('./character-model');
+const passport = require('passport');
+
+const { router: authRouter, localStrategy, jwtStrategy } = require('./auth');
+
+const Character = require('./models/character-model');
 const mongoose = require('mongoose');
 
 const { PORT, CLIENT_ORIGIN } = require('./config');
@@ -30,6 +34,13 @@ app.use(
 app.use(express.json());
 
 app.use('/api', characterRouter);
+
+passport.use(localStrategy);
+passport.use(jwtStrategy);
+
+app.use('/auth', authRouter);
+
+app.use(passport.authenticate('jwt', {session: false, failWithError: true}));
 
 function runServer(port = PORT) {
   const server = app
